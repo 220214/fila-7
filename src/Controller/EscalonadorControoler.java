@@ -23,7 +23,7 @@ Fila fila =new Fila();
 	                System.out.println("Processo " + ((Object) currentProcess).getId() + " concluído.");
 	            } else {
 	                // O processo precisará ser executado novamente após o quantum
-	                currentProcess.execute(quantum);
+	                ((Object) currentProcess).execute(quantum);
 	                System.out.println("Processo " + currentProcess.getId() + " executado por " + quantum + " unidades de tempo.");
 	                processQueue.add(currentProcess);
 	            }
